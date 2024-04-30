@@ -1,0 +1,14 @@
+﻿{
+  "platformName": "ios",
+  "appium:deviceName": "iPhone 14 Pro",
+  "appium:osVersion": "16",
+  "appium:app": "bs://<app_hashed_id>",
+  "bstack:options": {
+    "projectName": "BStack Demo",
+    "buildName": "browserstack-build-1",
+    "sessionName": "BStack single mstest",
+    "userName": "BROWSERSTACK_USERNAME",
+    "accessKey": "BROWSERSTACK_ACCESS_KEY",
+    "debug": true
+  }
+}

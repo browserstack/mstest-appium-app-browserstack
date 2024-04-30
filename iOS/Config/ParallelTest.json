@@ -1,0 +1,27 @@
+﻿{
+  "commonCaps": {
+    "platformName": "ios",
+    "appium:app": "bs://<app_hashed_id>",
+    "bstack:options": {
+      "projectName": "BStack Demo",
+      "buildName": "browserstack-build-1",
+      "userName": "BROWSERSTACK_USERNAME",
+      "accessKey": "BROWSERSTACK_ACCESS_KEY",
+      "debug": true
+    }
+  },
+  "iPhone14Pro": {
+    "appium:deviceName": "iPhone 14 Pro",
+    "appium:osVersion": "16.0",
+    "bstack:options": {
+      "sessionName": "BStack parallel mstest"
+    }
+  },
+  "iPhone14": {
+    "appium:deviceName": "iPhone 14",
+    "appium:osVersion": "16",
+    "bstack:options": {
+      "sessionName": "BStack parallel mstest"
+    }
+  }
+}
