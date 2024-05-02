@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using OpenQA.Selenium.Appium;
 
 namespace Common;
@@ -40,10 +39,15 @@ public class Utils
             if (property.Value.Type != JTokenType.Object)
                 capabilities.AddAdditionalCapability(property.Name, (JValue)property.Value);
         }
+
         // Update bstack:options with user creds. value in config file takes precedence over env variable.
         if (!testConfig.ContainsKey("bstack:options"))
             testConfig.Add("bstack:options", new JObject());
 
+        if (!testConfig.GetValue("bstack:options").HasValues)
+            testConfig["bstack:options"] = new JObject();
+
+        // Prepare bstackOptions to neccessarily contain username and accesskeys.
         testConfig["bstack:options"]["userName"] = username();
         testConfig["bstack:options"]["accessKey"] = accessKey();
 
@@ -62,18 +66,20 @@ public class Utils
 
     private string? username()
     {
-        string? username = (string?)testConfig["bstack:options"]["userName"];
+        JObject bStackOptions = (JObject)testConfig["bstack:options"];
+        string? username = (string?)bStackOptions.GetValue("userName");
         if (username is null)
-            username = Environment.GetEnvironmentVariable("BROWSERSTACK_USERNAME_OLD");
+            username = Environment.GetEnvironmentVariable("BROWSERSTACK_USERNAME");
 
         return username;
     }
 
     public string? accessKey()
     {
-        string? accessKey = (string?)testConfig["bstack:options"]["accessKey"];
+        JObject bStackOptions = (JObject)testConfig["bstack:options"];
+        string? accessKey = (string?)bStackOptions.GetValue("accessKey");
         if (accessKey is null)
-            accessKey = Environment.GetEnvironmentVariable("BROWSERSTACK_ACCESS_KEY_OLD");
+            accessKey = Environment.GetEnvironmentVariable("BROWSERSTACK_ACCESS_KEY");
 
         return accessKey;
     }
