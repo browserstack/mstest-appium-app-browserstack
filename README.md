@@ -45,7 +45,7 @@ You can get your browserstack credentials from [here](https://www.browserstack.c
         "app_url": "bs://<app_hashed_id>"
     }
     ```
-- Paste this app hashed id to the corresponding config file. For Example: The sample android app used for Android Single Test can be found [here](https://github.com/browserstack/mstest-appium-app-browserstack/blob/sdk/android/WikipediaSample.apk). Upload the app and paste the hashed id [here](https://github.com/browserstack/mstest-appium-app-browserstack/blob/main/Android/Config/SingleTest.json#L5).
+- Paste this app hashed id to the corresponding config file. For Example: The sample android app used for Android Single Test can be found [here](https://github.com/browserstack/mstest-appium-app-browserstack/blob/sdk/Android/WikipediaSample.apk). Upload the app and paste the hashed id [here](https://github.com/browserstack/mstest-appium-app-browserstack/blob/main/Android/Config/SingleTest.json#L5).
 
 ### Running Tests
 
