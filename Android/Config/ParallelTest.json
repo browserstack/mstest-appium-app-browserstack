@@ -1,0 +1,27 @@
+﻿{
+  "commonCaps": {
+    "platformName": "android",
+    "appium:app": "bs://<app_hashed_id>",
+    "bstack:options": {
+      "projectName": "BStack Demo",
+      "buildName": "browserstack-build-1",
+      "userName": "BROWSERSTACK_USERNAME",
+      "accessKey": "BROWSERSTACK_ACCESS_KEY",
+      "debug": true
+    }
+  },
+  "pixel3": {
+    "appium:deviceName": "Google Pixel 3",
+    "appium:osVersion": "9.0",
+    "bstack:options": {
+      "sessionName": "BStack parallel mstest"
+    }
+  },
+  "samsungs10": {
+    "appium:deviceName": "Samsung Galaxy S10",
+    "appium:osVersion": "9.0",
+    "bstack:options": {
+      "sessionName": "BStack parallel mstest"
+    }
+  }
+}
