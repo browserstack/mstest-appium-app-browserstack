@@ -1,7 +1,7 @@
 ﻿{
   "platformName": "android",
-  "appium:deviceName": "Google Pixel 3",
-  "appium:osVersion": "9.0",
+  "appium:deviceName": "Google Pixel 8 Pro",
+  "appium:osVersion": "14.0",
   "appium:app": "bs://<app_hashed_id>",
   "bstack:options": {
     "projectName": "BStack Demo",
